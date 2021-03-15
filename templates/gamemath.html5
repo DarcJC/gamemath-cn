@@ -80,7 +80,7 @@ $endfor$
       </div>
       $endif$
       <div class="NavContents"><a href="./">目录</a></div>
-      $if(next_prev)$
+      $if(next_chap)$
       <div class="NavNextChapter">
         <a class="NavChapterNum" href="$next_chap_url$">$next_chap$ &gt;&gt;</a>
       </div>
@@ -109,7 +109,7 @@ $endfor$
     <p><a href="https://github.com/$author$"><i class="author">@$author$</i></a></p>
     $endfor$
     $if(date)$
-    <h5>日期</h4>
+    <h5>完成日期</h4>
     <p class="date">$date$</p>
     $endif$
     $if(toc)$
