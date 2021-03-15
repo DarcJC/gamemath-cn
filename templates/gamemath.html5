@@ -40,6 +40,9 @@ $endif$
     .title {
       font-size: var(--font-size-title);
     }
+    #title-block-header {
+      margin-left: 2rem;
+    }
   </style>
 $if(highlighting-css)$
   <style type="text/css">
