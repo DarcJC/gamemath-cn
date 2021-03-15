@@ -101,17 +101,17 @@ $endfor$
   $if(title)$
   <header id="title-block-header">
     <h3>关于译文</h3>
-    <h4>译者</h4>
+    <h5>译者</h4>
     $for(author)$
     <p><a href="https://github.com/$author$"><i class="author">@$author$</i></a></p>
     $endfor$
     $if(date)$
-    <h4>日期</h4>
+    <h5>日期</h4>
     <p class="date">$date$</p>
     $endif$
     $if(toc)$
     <nav id="$idprefix$TOC" role="doc-toc">
-      <h4 id="$idprefix$toc-title">内容清单</h2>
+      <h5 id="$idprefix$toc-title">内容清单</h2>
       $table-of-contents$
     </nav>
     $endif$
