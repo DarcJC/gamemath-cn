@@ -84,7 +84,8 @@ $endfor$
       $endif$
     </header>
     <div class="ChapterTitleSection">
-      <div class="ChapterNumber">第 $chap_num$ 章</div><div class="ChapterTitle">$title$</div>
+      $if(chap_num)$
+      <div class="ChapterNumber">第 $chap_num$ 章</div>$endif$<div class="ChapterTitle">$title$</div>
       <div class="ChapterQuotes">
       $if(quotation_value)$
       <div class="WittyQuotation">

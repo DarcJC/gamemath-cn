@@ -21,4 +21,6 @@
 
 - 测试生成页面
   
-`$ pandoc -f markdown --data-dir $pwd -t html5 --toc --template gamemath pages/xxx.md > dist/xxx.html`
+`$ pandoc -f markdown --data-dir . -t html5 --toc --template gamemath pages/xxx.md > dist/xxx.html`
+
+> 注意,命令默认都是在项目根目录使用。
