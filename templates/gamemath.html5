@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/DarcJC/pictures-host/imgs/20210315200336.css" />
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    q { quotes: "“" "”" "‘" "’"; }
+  </style>
+  <style type="text/css">
+    body {
+      background: var(--background);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: var(--font-size-normal);
+      margin: 10px;
+      line-height: 1.25;
+      color:  var(--primary-color);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--heading-color);
+    }
+    .title {
+      font-size: var(--font-size-title);
+    }
+  </style>
+$if(highlighting-css)$
+  <style type="text/css">
+    $highlighting-css$
+  </style>
+$endif$
+  <style>
+    $styles$
+  </style>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$if(math)$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+
+<body>
+<div id="BodyContainer">
+  $for(include-before)$
+    $include-before$
+  $endfor$
+  <div id="LeftColumn"></div>
+  <div id="MainColumn">
+    <header class="NavHeader">
+      $if(prev_chap)$
+      <div class="NavPrevChapter">
+        <a class="NavChapterNum" href="$prev_chap_url$">&lt;&lt; $prev_chap$</a>
+      </div>
+      $endif$
+      <div class="NavContents"><a href="./">目录</a></div>
+      $if(next_prev)$
+      <div class="NavNextChapter">
+        <a class="NavChapterNum" href="$next_chap_url$">$next_chap$ &gt;&gt;</a>
+      </div>
+      $endif$
+    </header>
+    <div class="ChapterTitleSection">
+      <div class="ChapterNumber">第 $chap_num$ 章</div><div class="ChapterTitle">$title$</div>
+      <div class="ChapterQuotes">
+      $if(quotation_value)$
+      <div class="WittyQuotation">
+        $quotation_value$
+        <div class="QuotationSource">—&nbsp;$quotation_author$ 出自 <i>A $quotation_from$</i> ($quotation_time$)</div>
+      </div>
+      $endif$
+      </div>
+    </div>
+    <!-- 内容开始 -->
+    $body$
+  </div>
+  $if(title)$
+  <header id="title-block-header">
+    <h3>关于译文</h3>
+    <h4>译者</h4>
+    $for(author)$
+    <p><a href="https://github.com/$author$"><i class="author">@$author$</i></a></p>
+    $endfor$
+    $if(date)$
+    <h4>日期</h4>
+    <p class="date">$date$</p>
+    $endif$
+    $if(toc)$
+    <nav id="$idprefix$TOC" role="doc-toc">
+      <h4 id="$idprefix$toc-title">内容清单</h2>
+      $table-of-contents$
+    </nav>
+    $endif$
+  </header>
+  $endif$
+  $for(include-after)$
+  $include-after$
+  $endfor$
+</div>
+</body>
+</html>
