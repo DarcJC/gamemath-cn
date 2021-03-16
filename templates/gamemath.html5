@@ -37,8 +37,20 @@ $endif$
     h1, h2, h3, h4, h5, h6 {
       color: var(--heading-color);
     }
+    small {
+      var(--font-size-small);
+      overflow-wrap: break-word;
+    }
+    hr {
+      border-width: 1px 0 0 0;
+    }
     .title {
       font-size: var(--font-size-title);
+    }
+    .bold {
+      color: var(--heading-color);
+      font-weigh: bold;
+      margin-right: 10px;
     }
     #title-block-header {
       margin-left: 2rem;
