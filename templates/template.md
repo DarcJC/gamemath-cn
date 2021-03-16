@@ -12,4 +12,9 @@ quotation_value: |
 quotation_from: Study in Scarlett
 quotation_time: 1887
 quotation_author: Sherlock Holmes
+equotation_value: |
+  Careful. We don't want to learn from this.
+equotation_from: Calvin and Hobbes
+equotation_time: 1958-
+equotation_author: Bill Watterson
 ...
