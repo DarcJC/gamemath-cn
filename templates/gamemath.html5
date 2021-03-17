@@ -86,17 +86,18 @@ $endfor$
   <div id="LeftColumn"></div>
   <div id="MainColumn">
     <header class="NavHeader">
-      $if(prev_chap)$
       <div class="NavPrevChapter">
+        $if(prev_chap)$
         <a class="NavChapterNum" href="$prev_chap_url$">&lt;&lt; $prev_chap$</a>
+        $endif$
       </div>
-      $endif$
       <div class="NavContents"><a href="./">目录</a></div>
-      $if(next_chap)$
+      
       <div class="NavNextChapter">
+        $if(next_chap)$
         <a class="NavChapterNum" href="$next_chap_url$">$next_chap$ &gt;&gt;</a>
+        $endif$
       </div>
-      $endif$
     </header>
     <div class="ChapterTitleSection">
       $if(chap_num)$
@@ -105,13 +106,39 @@ $endfor$
       $if(quotation_value)$
       <div class="WittyQuotation">
         $quotation_value$
-        <div class="QuotationSource">—&nbsp;$quotation_author$ From <i>A $quotation_from$</i> ($quotation_time$)</div>
+        <div class="QuotationSource">—&nbsp;$quotation_author$ from <i>A $quotation_from$</i> ($quotation_time$)</div>
       </div>
       $endif$
       </div>
     </div>
     <!-- 内容开始 -->
     $body$
+    <!-- 内容结束 -->
+    $if(equotation_value)$
+    <div class="ChapterEndQuotes">
+      <div class="WittyQuotation">
+              $equotation_value$
+        <div class="QuotationSource">
+        —&nbsp;$equotation_author$ ($equotation_time$) from <i>$equotation_author$</i>
+        </div>
+      </div>
+    </div>
+    $endif$
+    <footer class="NavBar">
+      <div class="NavPrevChapter">
+        $if(prev_chap)$
+        <a class="NavChapterNum" href="$prev_chap_url$">&lt;&lt; $prev_chap$</a>
+        $endif$
+      </div>
+      <div class="NavContents">
+        <a onclick="window.scrollTo(0,0);" style="cursor:pointer;">返回顶部</a>
+      </div>
+      <div class="NavNextChapter">
+        $if(next_chap)$
+        <a class="NavChapterNum" href="$next_chap_url$">$next_chap$ &gt;&gt;</a>
+        $endif$
+      </div>
+    </footer>
   </div>
   $if(title)$
   <header id="title-block-header">

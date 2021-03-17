@@ -55,6 +55,16 @@ quotation_time: 1980
 quotation_author: Doctor Who
 ```
 
+添加前缀`e`代表结尾的散文引用：
+
+```yaml
+equotation_value: | 
+  Careful. We don't want to learn from this.
+equotation_from: Calvin and Hobbes 
+equotation_time: 1958
+equotation_author: Bill Watterson
+```
+
 #### 完成日期
 
 翻译完成日期会在译文信息侧边栏中展示。
