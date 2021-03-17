@@ -19,6 +19,7 @@ do
     echo "正在转换 ${i} ...";
 
     filename="${i##*/}";
+    filename="${filename%.*}"
 
     pandoc -f markdown -t html5 --data-dir . --toc --template gamemath $i -o $out_dir/$filename.html
 
