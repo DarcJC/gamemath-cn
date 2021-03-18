@@ -50,8 +50,7 @@
 ```yaml
 quotation_value: |
   First things first, but not necessarily in that order.
-quotation_from: Meglos 
-quotation_time: 1980 
+quotation_from: Meglos(1000)
 quotation_author: Doctor Who
 ```
 
@@ -61,8 +60,7 @@ quotation_author: Doctor Who
 equotation_value: | 
   Careful. We don't want to learn from this.
 equotation_from: Calvin and Hobbes 
-equotation_time: 1958
-equotation_author: Bill Watterson
+equotation_author: Bill Watterson(1999)
 ```
 
 #### 完成日期

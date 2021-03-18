@@ -106,7 +106,7 @@ $endfor$
       $if(quotation_value)$
       <div class="WittyQuotation">
         $quotation_value$
-        <div class="QuotationSource">—&nbsp;$quotation_author$ from <i>A $quotation_from$</i> ($quotation_time$)</div>
+        <div class="QuotationSource">—&nbsp;$quotation_author$ from <i>A $quotation_from$</i></div>
       </div>
       $endif$
       </div>
@@ -119,7 +119,7 @@ $endfor$
       <div class="WittyQuotation">
               $equotation_value$
         <div class="QuotationSource">
-        —&nbsp;$equotation_author$ ($equotation_time$) from <i>$equotation_author$</i>
+        —&nbsp;$equotation_author$ from <i>$equotation_author$</i>
         </div>
       </div>
     </div>
